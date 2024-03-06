@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <div class="quiz-app">
@@ -11,7 +12,7 @@
             <div class="category">Category: <span>HTML</span></div>
             <div class="count">Questions Count: <span>10</span></div>
         </div>
-        <div class="question-area">
+        <div class="quiz-area">
             <h2>Why we use &lt;br&gt; element?</h2>
             <div class="answers-area">
                 <div class="answer">
@@ -30,25 +31,28 @@
                     <input type="radio" name="questions" id="answer_4">
                     <label for="answer_4">To add Horizontal line</label>
                 </div>
-                <button class="submit-button">Submit</button>
-                <div class="bullets">
-                    <div class="spans">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="countdown">
-                        <span class="minutes">2mins</span> : 
-                        <span class="seconds">20sec</span>
-                    </div>
-                </div>
             </div>
+        </div>
+        <button class="submit-button">Submit</button>
+        <div class="bullets">
+            <div class="spans">
+                <span class="on"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="countdown">
+                <span class="minutes">2mins</span> : 
+                <span class="seconds">20sec</span>
+            </div>
+        </div>
+        <div class="results">
+            <span>Perfect</span> 10 / 10
         </div>
     </div>
 </body>
