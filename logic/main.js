@@ -10,14 +10,11 @@ const countDownElement = document.querySelector('.countdown');
 let currentIndex = 0;
 let rightAnswer = 0;
 let countDownInterval;
-function getData(){
-    let myRequest = new XMLHttpRequest();
-
-    myRequest.addEventListener('readystatechange',function(){
-        if(this.readyState === 4 && this.status === 200) {
-            let questionsObj = JSON.parse(this.responseText);
+async function getData(){
+            // fetch the data
+            let response = await fetch("data/questions.json");
+            let questionsObj = await response.json();
             let questionsCount = questionsObj.length;
-
             // create bullets + set questions count
             createBullets(questionsCount);
             // Add question data
@@ -45,11 +42,11 @@ function getData(){
                 showResults(questionsCount);
             })
         }
-    })
+    // })
 
-    myRequest.open("GET","data/questions.json",true);
-    myRequest.send();
-}
+    // myRequest.open("GET","data/questions.json",true);
+    // myRequest.send();
+    // }
 getData();
 
 function createBullets(num) {
