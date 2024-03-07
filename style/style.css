@@ -114,8 +114,15 @@ a {
   background-color: #0075ff;
 }
 
+.quiz-app .results {
+  margin-top: 10px;
+  padding: 20px 10px;
+  background-color: #fff;
+}
+
 .quiz-app span {
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .quiz-app span.bad {
