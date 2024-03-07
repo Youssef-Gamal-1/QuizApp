@@ -46,7 +46,6 @@ a {
 }
 
 .quiz-app .answers-area .answer {
-  background-color: #f9f9f9;
   padding: 20px;
   width: 100%;
 }
@@ -55,7 +54,11 @@ a {
   border-bottom: 1px solid #dfdfdf;
 }
 
-.quiz-app .answers-area .answer :is(input[type=Radio]:checked + label, input[type=radio]) {
+.quiz-app .answers-area .answer:has(input[type=radio]:checked) {
+  accent-color: #0075ff;
+}
+
+.quiz-app .answers-area .answer :is(input[type=radio]:checked + label) {
   color: #0075ff;
 }
 

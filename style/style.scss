@@ -26,15 +26,18 @@
     padding: $main-padding 0;
 }
 .quiz-app .answers-area .answer {
-    background-color: #f9f9f9;
+    // background-color: #f9f9f9;
     padding: $main-padding;
     width: 100%
 }
 .quiz-app .answers-area .answer:not(:last-child) {
     border-bottom: 1px solid #dfdfdf;
 }
-.quiz-app .answers-area .answer :is(input[type="Radio"]:checked + label,input[type="radio"]) {
-    color: $text-color;
+.quiz-app .answers-area .answer:has(input[type="radio"]:checked) {
+    accent-color: $text-color;
+} 
+.quiz-app .answers-area .answer :is(input[type="radio"]:checked + label) {
+    color: $text-color
 } 
 .quiz-app .answers-area .answer label {
     cursor: pointer;
